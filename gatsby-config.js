@@ -5,5 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Movie Finder',
+    author: 'Shaon Kabir'
+  }
 }
