@@ -61,6 +61,15 @@ const GlobalStyles = createGlobalStyle`
     transition: ${props => props.theme.transition};
   }
   
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(61, 61, 61, 0.589);
+}
 
 `
 
