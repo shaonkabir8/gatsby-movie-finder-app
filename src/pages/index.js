@@ -3,7 +3,8 @@ import { ThemeProvider } from "styled-components"
 import GlobalStyles from "../styles/GlobalStyles"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import SideBar from "../components/SideBar"
+import SideBar from "../components/SideBar";
+import { Container, FlexContainer } from '../styles/LayoutStyles';
 
 // Define Theme Options
 const theme = {
@@ -21,8 +22,8 @@ const Index = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header />
-      <div className="wrapper">
-        <div className="flex-container">
+      <Container>
+        <FlexContainer>
           <SideBar />
           <div
             className="col-md-6 offset-md-3 text-right"
@@ -30,8 +31,8 @@ const Index = () => {
           >
             <h1 className="text-center my-3">Movie Card will go here</h1>
           </div>
-        </div>
-      </div>
+        </FlexContainer>
+      </Container>
       <Footer />
     </ThemeProvider>
   )
