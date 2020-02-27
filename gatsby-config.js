@@ -8,5 +8,6 @@ module.exports = {
   siteMetadata: {
     title: 'Movie Finder',
     author: 'Shaon Kabir'
-  }
+  },
+  plugins: [`gatsby-plugin-styled-components`],
 }

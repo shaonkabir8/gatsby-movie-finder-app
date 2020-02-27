@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles'
 import Header from '../components/Header';
-
+import Footer from '../components/Footer'
 
 // Define Theme Options
 const theme = {
@@ -21,6 +21,7 @@ const Index = () => {
         <ThemeProvider theme={theme}>
             <GlobalStyles/>
             <Header/>
+            <Footer/>
         </ThemeProvider>
     )
 }
