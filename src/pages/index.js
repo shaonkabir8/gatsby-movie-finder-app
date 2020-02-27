@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles'
 import Header from '../components/Header';
 import Footer from '../components/Footer'
+import Layout from '../components/SideBar';
 
 // Define Theme Options
 const theme = {
@@ -21,6 +22,7 @@ const Index = () => {
         <ThemeProvider theme={theme}>
             <GlobalStyles/>
             <Header/>
+            <Layout />
             <Footer/>
         </ThemeProvider>
     )

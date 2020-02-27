@@ -1,18 +1,17 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
- @import url('https://fonts.googleapis.com/css?family=Lora:400,700,700i|Merriweather:400,400i&display=swap');
-
-  * {
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+* {
   	margin: 0;
   	padding: 0;
   	box-sizing: border-box;
   }
   body {
-    font-family: 'Merriweather',serif;
+    font-family: 'Montserrat', !important;
     font-size: 16px;
     line-height: 1.7;
-    background: ${props => props.theme.color.bg};
+    background: ${props => props.theme.color.bg} !important;
     color: #fff;
   }
   h1,
