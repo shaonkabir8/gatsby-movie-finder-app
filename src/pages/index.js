@@ -1,6 +1,8 @@
 import React from "react"
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles'
+import Header from '../components/Header';
+
 
 // Define Theme Options
 const theme = {
@@ -18,7 +20,7 @@ const Index = () => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles/>
-            Hello Bangladesh
+            <Header/>
         </ThemeProvider>
     )
 }
