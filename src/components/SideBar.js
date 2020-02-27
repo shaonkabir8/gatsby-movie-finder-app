@@ -1,47 +1,45 @@
 import React from "react"
 import { Link } from "gatsby"
-import SideBarStyle from "../styles/SideBarStyle"
+import {SideBarNav, SideBarNavList, SideBarNavItem, SideBarNavLink } from "../styles/SideBarStyle"
 
 const sidebar = () => (
-  <SideBarStyle>
-    <nav className="sidebar">
-      <ul>
-        <li>
-          <Link to="/">All Genres</Link>
-        </li>
-        <li>
-          <Link to="/">Adventure</Link>
-        </li>
-        <li>
-          <Link to="/">Action</Link>
-        </li>
-        <li>
-          <Link to="/">Drama</Link>
-        </li>
-        <li>
-          <Link to="/">Comedy</Link>
-        </li>
-        <li>
-          <Link to="/">Fiction</Link>
-        </li>
-        <li>
-          <Link to="/">Romantic</Link>
-        </li>
-        <li>
-          <Link to="/">Horror</Link>
-        </li>
-        <li>
-          <Link to="/">Crime</Link>
-        </li>
-        <li>
-          <Link to="/">Documentary</Link>
-        </li>
-        <li>
-          <Link to="/">Animation</Link>
-        </li>
-      </ul>
-    </nav>
-  </SideBarStyle>
+  <SideBarNav>
+    <SideBarNavList>
+        <SideBarNavItem>
+          <SideBarNavLink>All Genres</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Adventure</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Action</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Drama</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Comedy</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink >Fiction</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Romantic</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Horror</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Crime</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink>Documentary</SideBarNavLink>
+        </SideBarNavItem>
+        <SideBarNavItem>
+          <SideBarNavLink >Animation</SideBarNavLink>
+        </SideBarNavItem>
+        </SideBarNavList>
+  </SideBarNav>
 )
 
 export default sidebar
