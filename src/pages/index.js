@@ -5,6 +5,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SideBar from "../components/SideBar";
 import { Container, FlexContainer } from '../styles/LayoutStyles';
+import Movies from '../components/Movies';
 
 // Define Theme Options
 const theme = {
@@ -25,12 +26,7 @@ const Index = () => {
       <Container>
         <FlexContainer>
           <SideBar />
-          <div
-            className="col-md-6 offset-md-3 text-right"
-            style={{ height: "50vh" }}
-          >
-            <h1 className="text-center my-3">Movie Card will go here</h1>
-          </div>
+          <Movies />
         </FlexContainer>
       </Container>
       <Footer />
