@@ -62,3 +62,36 @@ export const SideBarNavLink = styled.a`
         color: ${props => props.theme.color.link};
     } */
 `;
+
+
+export const FooterArea = styled.div`
+  padding: 0 2rem;
+  color: #737783;
+  font-size: 15px;
+  
+  .movidb-credit {
+    display: block;
+
+    img {
+      height: 100%;
+      width: 130px;
+      margin-bottom: 5px;
+    }
+  }
+`
+
+export const FooterContent = styled.div`
+  .footer-link {
+    color: #7678fb;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  i {
+    display: inline-block;
+    margin: 0 5px;
+    color: red;
+  }
+  .fa-coffee {
+    color: ${props => props.theme.color.yellow};
+  }
+`
