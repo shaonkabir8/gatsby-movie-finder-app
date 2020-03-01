@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import GlobalStyles from "../styles/GlobalStyles"
+import theme from '../utils/theme'
 import { Container, FlexContainer } from "../styles/LayoutStyles"
 import Header from "./Header"
 import Footer from "./Footer"
 import SideBar from "./SideBar"
 import Movies from "./Movies"
 import { showGenres } from '../utils/genres'
-
-// Define Theme Options
-const theme = {
-  color: {
-    bg: "#0c0f26",
-    light: "#171934",
-    yellow: "#faca31",
-    link: "#7678fb",
-  },
-  transition: "all .3s linear",
-}
 
 const Root = () => {
   // our API key from MovieDB
