@@ -23,15 +23,10 @@ const MovieInfo = props => {
 
   const {
     backdrop_path,
-    budget,
-    homepage,
     original_title,
     overview,
-    popularity,
-    release_date,
     tagline,
-    vote_average,
-    id,
+    vote_average
   } = movie
 
   const backgroundImage = {

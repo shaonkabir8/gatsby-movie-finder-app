@@ -4,7 +4,6 @@ import GlobalStyles from "../styles/GlobalStyles"
 import theme from '../utils/theme'
 import { Container, FlexContainer } from "../styles/LayoutStyles"
 import Header from "./Header"
-import Footer from "./Footer"
 import SideBar from "./SideBar"
 import Movies from "./Movies"
 import { showGenres } from '../utils/genres'
