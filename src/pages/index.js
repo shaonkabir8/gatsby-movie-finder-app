@@ -1,36 +1,14 @@
 import React from "react"
-import { ThemeProvider } from "styled-components"
-import GlobalStyles from "../styles/GlobalStyles"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import SideBar from "../components/SideBar";
-import { Container, FlexContainer } from '../styles/LayoutStyles';
-import Movies from '../components/Movies';
-
-// Define Theme Options
-const theme = {
-  color: {
-    bg: "#0c0f26",
-    light: "#171934",
-    yellow: "#faca31",
-    link: "#7678fb",
-  },
-  transition: "all .3s linear",
-}
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import Root from "../components/Root"
 
 const Index = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Header />
-      <Container>
-        <FlexContainer>
-          <SideBar />
-          <Movies />
-        </FlexContainer>
-      </Container>
-      <Footer />
-    </ThemeProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Root} />
+      </Switch>
+    </BrowserRouter>
   )
 }
 
