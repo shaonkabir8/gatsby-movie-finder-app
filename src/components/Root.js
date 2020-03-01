@@ -53,7 +53,6 @@ const Root = () => {
           <Movies movies={movies} handleGenres={handleGenres} />
         </FlexContainer>
       </Container>
-      <Footer />
     </ThemeProvider>
   )
 }
