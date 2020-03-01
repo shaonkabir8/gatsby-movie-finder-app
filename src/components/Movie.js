@@ -1,17 +1,14 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link } from 'react-router-dom'
 import {
-  MovieLink,
   MovieStyle,
   MovieTitle,
   Infocontainer,
   MovieRatings
 } from "../styles/MovieStyles"
-import { generateGenres } from '../utils/genres'
 
 
 const Movie = ({ movie , showGenres}) => {
-    console.log(movie)
   const { poster_path, original_title, vote_average, id, release_date } = movie
 
   return (
