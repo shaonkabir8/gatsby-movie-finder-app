@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components';
 import Movie from "./Movie"
+import { showGenres } from '../utils/genres'
 
 const MovieStyle = styled.div`
 	display: flex;
@@ -26,10 +27,17 @@ const Movies = () => {
       .catch(err => console.log(err))
   }, [])
 
+  // HandleGenres
+  const handleGenres = movie => {
+    return showGenres().map(m => (m.id === movie.genre_ids[0] ? m.name : null));
+  };
+
+
+
   return (
     <MovieStyle>
       {movies.map(movie => {
-		  return <Movie movie={movie}/>
+		  return <Movie movie={movie} showGenres={handleGenres}/>
 	  })}
     </MovieStyle>
   )

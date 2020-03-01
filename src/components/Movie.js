@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import {
   MovieLink,
   MovieStyle,
@@ -7,8 +6,10 @@ import {
   Infocontainer,
   MovieRatings
 } from "../styles/MovieStyles"
+import { generateGenres } from '../utils/genres'
 
-const Movie = ({ movie }) => {
+
+const Movie = ({ movie , showGenres}) => {
     console.log(movie)
   const { poster_path, original_title, vote_average, id, release_date } = movie
 
@@ -25,7 +26,7 @@ const Movie = ({ movie }) => {
         </MovieTitle>
         <Infocontainer>
           <p>
-            <strong>Category</strong>
+            <strong>{showGenres(movie)}</strong>
           </p>
           <p>
             <strong>{release_date}</strong>
