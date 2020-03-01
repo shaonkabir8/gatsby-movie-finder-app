@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import HeaderStyle from "../styles/HeaderStyle"
 import Head from "./Head"
 
-const Header = () => (
+const Header = ({ handleChange, handleSubmit }) => (
   <HeaderStyle>
     <Head />
     <header className="header">
@@ -11,11 +11,12 @@ const Header = () => (
         <Link to="/">Movie Finder</Link>
       </div>
       <div className="search-bar">
-        <form action="" className=" search-form">
+        <form  className=" search-form" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Search Movie"
             className="fo"
+            onChange={handleChange}
           />
         </form>
       </div>
