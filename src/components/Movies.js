@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from "react"
+import styled from 'styled-components';
 import Movie from "./Movie"
+
+const MovieStyle = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	padding: 3rem;
+	background: ${props => props.theme.color.light};
+`;
+
+
 const Movies = () => {
   // our API key from MovieDB
   const apiKey = "8beeb3840481b08aae693a269c46433e"
@@ -15,11 +27,11 @@ const Movies = () => {
   }, [])
 
   return (
-    <section className="movies">
+    <MovieStyle>
       {movies.map(movie => {
 		  return <Movie movie={movie}/>
 	  })}
-    </section>
+    </MovieStyle>
   )
 }
 
