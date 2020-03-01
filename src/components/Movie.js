@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 import {
   MovieLink,
   MovieStyle,
@@ -15,7 +16,7 @@ const Movie = ({ movie , showGenres}) => {
 
   return (
     <MovieStyle>
-      <MovieLink to={`/movie/${id}`} className="movie">
+      <Link to={`/movie/${id}`} className="movie">
         <img
           className="movie__img"
           src={`https://image.tmdb.org/t/p/w300${poster_path}`}
@@ -33,7 +34,7 @@ const Movie = ({ movie , showGenres}) => {
           </p>
         </Infocontainer>
         <MovieRatings><i className="fas fa-star"></i>{vote_average}</MovieRatings>
-      </MovieLink>
+      </Link>
     </MovieStyle>
   )
 }

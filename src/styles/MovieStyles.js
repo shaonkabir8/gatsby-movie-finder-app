@@ -9,23 +9,22 @@ export const MovieStyle = styled.div`
     border-radius: 0.8rem;
     transition: all .3s linear;
   }
-`
+  .movie {
+    width: 80%;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #737783;
 
-export const MovieLink = styled.a`
-  width: 80%;
-  font-size: 1.2rem;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  color: #737783;
-
-  &:hover  img{
-      box-shadow: 0 0 20px ${props => props.theme.color.bg};
-      opacity: 0.7;
+    &:hover  img{
+        box-shadow: 0 0 20px ${props => props.theme.color.bg};
+        opacity: 0.7;
+    }
   }
-
 `
+
 
 export const MovieTitle = styled.p`
   color: #fff;
