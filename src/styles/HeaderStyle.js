@@ -11,10 +11,6 @@ const HeaderStyle = styled.div`
       padding-left: 46px;
     }
 
-    .search-bar {
-      width: 40%;
-    }
-
     .dropdown_item p {
       color: #fff;
       font-weight: bold;
@@ -22,7 +18,7 @@ const HeaderStyle = styled.div`
 
     .logo a {
       color: ${props => props.theme.color.yellow};
-      padding: 4px 8px;
+      padding: 8px 15px;
       border: 1px solid;
       border-radius: 3px;
       display: inline-block;
@@ -31,10 +27,16 @@ const HeaderStyle = styled.div`
 
       &:hover {
         color: ${props => props.theme.color.link};
+        text-decoration: none;
+        box-shadow: 0 0 7px ${props => props.theme.color.link}
       }
     }
 
-    input[type="text"] {
+    .search-bar {
+      width: 40%;
+    }
+
+    &__input {
       width: 100%;
       background: ${props => props.theme.color.light};
       color: ${props => props.theme.color.link};
@@ -44,8 +46,12 @@ const HeaderStyle = styled.div`
 
       &:focus {
         outline-color: transparent;
+        box-shadow: 0 0 2px ${props => props.theme.color.yellow};
       }
     }
+
+
+
   }
 `
 

@@ -11,11 +11,11 @@ const Header = ({ handleChange, handleSubmit }) => (
         <Link to="/">Movie Finder</Link>
       </div>
       <div className="search-bar">
-        <form  className=" search-form" onSubmit={handleSubmit}>
+        <form  className="header__form" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Search Movie"
-            className="fo"
+            className="header__input"
             onChange={handleChange}
           />
         </form>
