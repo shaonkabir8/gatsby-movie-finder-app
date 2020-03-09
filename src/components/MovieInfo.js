@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import { Link } from "react-router-dom"
 import MovieInfoStyle from "../styles/MovieInfoStyle"
 import Head from './Head'
 
