@@ -7,12 +7,12 @@ export const SideBarNav = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3rem 0;
+    padding-top: 3rem;
     border-bottom-left-radius: 1.5rem;
 `;
 
 export const SideBarNavList = styled.ul`
-    height: 50vh;
+    height: 70vh;
     font-size: 15px;
     list-style: none;
     overflow-y: scroll;
@@ -81,6 +81,7 @@ export const FooterArea = styled.div`
 `
 
 export const FooterContent = styled.div`
+  margin-bottom: 1rem;
   .footer-link {
     color: #7678fb;
     text-decoration: none;
