@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
-import GlobalStyles from "../styles/GlobalStyles"
 import theme from '../utils/theme'
 import { Container, FlexContainer } from "../styles/LayoutStyles"
 import Header from "./Header"
@@ -44,7 +43,6 @@ const Root = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
       <Header handleChange={handleChange} handleSubmit={handleSubmit}/>
       <Container>
         <FlexContainer>

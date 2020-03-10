@@ -1,5 +1,6 @@
+// to calculate 'rem' unit> font-size: 10px;
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
 
 *,
@@ -12,4 +13,16 @@ html {
 
 body {
     box-sizing: border-box;
+}
+
+
+// customize chrome scrollbar
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: rgba($color-link, .3);
 }
