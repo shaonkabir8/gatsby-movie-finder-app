@@ -6,8 +6,9 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/root";
 
 @import "layout/header";
-@import "layout/footer";
+@import "layout/sidebar";
 
 @import "pages/home";

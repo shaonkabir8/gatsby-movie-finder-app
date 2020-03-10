@@ -1,62 +1,54 @@
 import React from "react"
-import {
-  SideBarNav,
-  SideBarNavList,
-  SideBarNavItem,
-  SideBarNavLink,
-  FooterArea,
-  FooterContent
-} from "../styles/SideBarStyle"
+import { Link } from 'react-router-dom'
 import MovieDB from "../images/MovieDb.png"
 
+
+
 const sidebar = () => (
-  <SideBarNav>
-    <SideBarNavList>
-      <SideBarNavItem>
-        <SideBarNavLink>All Genres</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Adventure</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Action</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Drama</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Comedy</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Fiction</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Romantic</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Horror</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Crime</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Documentary</SideBarNavLink>
-      </SideBarNavItem>
-      <SideBarNavItem>
-        <SideBarNavLink>Animation</SideBarNavLink>
-      </SideBarNavItem>
-    </SideBarNavList>
-    <FooterArea>
-      <a
-        href="https://themovie.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="movidb-credit"
-      >
-        <img src={MovieDB} alt="MovieDB_Logo" />
+  <nav className="sidebar">
+    <ul className="sidebar__list">
+      <li className="sidebar__item">
+        <Link className="sidebar__link">All Genres</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Adventure</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Action</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Drama</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Comedy</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Fiction</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Romantic</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Horror</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Crime</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Documentary</Link>
+      </li>
+      <li className="sidebar__item">
+        <Link className="sidebar__link">Animation</Link>
+      </li>
+    </ul>
+    <div className="sidebar__footer">
+      <div className="sidebar__footer-image">
+      <a href="https://example.com">
+      <img src={MovieDB} alt="MovieDB_Logo"  className="sidebar__footer-img" />
       </a>
-      <FooterContent>
-        Build with <i className="fas fa-heart"></i> and
+      </div>
+      <div className="sidebar__footer-content">
+      Build with <i className="fas fa-heart"></i> and
         <i className="fas fa-coffee"></i> by {""}
         <a
           href="https://shaonkabir.netlify.com"
@@ -75,9 +67,9 @@ const sidebar = () => (
         >
           Github
         </a>
-      </FooterContent>
-    </FooterArea>
-  </SideBarNav>
+      </div>
+    </div>
+  </nav>
 )
 
 export default sidebar

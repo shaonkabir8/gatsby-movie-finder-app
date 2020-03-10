@@ -1,0 +1,15 @@
+.movie {
+
+    &__container {
+        max-width: 140rem;
+        margin: 0 auto;
+        min-height: 50rem;
+    }
+
+    &__inner {
+        display: flex;
+        width: 100%;
+
+    }
+
+}

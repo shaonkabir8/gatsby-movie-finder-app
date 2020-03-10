@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import theme from '../utils/theme'
-import { Container, FlexContainer } from "../styles/LayoutStyles"
 import Header from "./Header"
 import SideBar from "./SideBar"
 import Movies from "./Movies"
@@ -44,12 +43,14 @@ const Root = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header handleChange={handleChange} handleSubmit={handleSubmit}/>
-      <Container>
-        <FlexContainer>
-          <SideBar />
-          <Movies movies={movies} handleGenres={handleGenres} />
-        </FlexContainer>
-      </Container>
+      <div className="movie">
+        <div className="movie__container">
+          <div className="movie__inner">
+            <SideBar />
+            <Movies movies={movies} handleGenres={handleGenres} />
+          </div>
+        </div>
+      </div>
     </ThemeProvider>
   )
 }
