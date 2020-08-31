@@ -15,15 +15,16 @@ const SideBar = ({ items, onItemSelect, selectedItem }) => {
             }
             onClick={() => onItemSelect(item)}
           >
-            <a className="side-nav__link">{item.name}</a>
+            <p className="side-nav__link">{item.name}</p>
           </li>
         ))}
       </ul>
       <div className="footer">
         <a
           href="https://www.themoviedb.org/"
-          target="_blanck"
+          target="_blank"
           className="footer__logo"
+          rel="noopener noreferrer"
         >
           <img
             src={moviedbLogo}

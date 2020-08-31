@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 
 class PhoneNav extends Component {
   state = {
@@ -36,15 +36,14 @@ class PhoneNav extends Component {
                     className="phone-navigation__item"
                     onClick={() => this.props.onItemSelect(item)}
                   >
-                    <a
+                    <p
                       className={
                         item === this.props.selectedItem
                           ? "phone-navigation__link phone-navigation__link--active"
                           : "phone-navigation__link"
-                      }
-                    >
+                      }>
                       {item.name}
-                    </a>
+                    </p>
                   </li>
                 ))}
               </ul>

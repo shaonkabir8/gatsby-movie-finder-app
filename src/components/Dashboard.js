@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
+import { Link } from 'react-router-dom'
 import { movieUrl, key } from "../services/movieService";
 import { Fade } from "react-reveal";
 import { ClipLoader } from "react-spinners";
@@ -105,14 +106,12 @@ class Dashboard extends Component {
                     href={`https://www.themoviedb.org/movie/${movie.id}/cast`}
                     className="dashboard__casting"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Full Cast
                   </a>
                   <div className="dashboard__btn-group">
-                    <a
-                      onClick={this.handleHomeBtn}
-                      className="dashboard__btn dashboard__btn--home"
-                    >
+                    <Link to="/" className="dashboard__btn dashboard__btn--home">
                       <div className="dashboard__icon">
                         <i
                           style={{ marginRight: "0.7rem" }}
@@ -120,7 +119,7 @@ class Dashboard extends Component {
                         />
                         <i className="fa fa-home" />
                       </div>
-                    </a>
+                    </Link>
                     {!trailer ? (
                       ""
                     ) : (
@@ -128,6 +127,7 @@ class Dashboard extends Component {
                         href={`https://www.youtube.com/watch?v=${trailer.key}`}
                         target="_blank"
                         className="dashboard__btn"
+                        rel="noopener noreferrer"
                       >
                         Watch Trailer
                         <div
@@ -146,7 +146,7 @@ class Dashboard extends Component {
           </React.Fragment>
         </Fade>
       </React.Fragment>
-    );
+    )
   }
 }
 
