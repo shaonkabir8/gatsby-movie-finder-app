@@ -1,8 +1,6 @@
 {
   "name": "gatsby-movie-finder-app",
-  "desc": "Best Movie finder application created a lot of coffee and love",
   "version": "0.1.0",
-  "private": false,
   "author": "Shaon Kabir <shaonkabir98@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
