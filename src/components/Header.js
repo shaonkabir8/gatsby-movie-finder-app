@@ -1,33 +1,26 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import HeaderStyle from "../styles/HeaderStyle"
-import Head from "./Head"
+import React from "react";
+import Dropdown from "./Dropdown";
 
-const Header = ({ handleChange, handleSubmit }) => (
-  <HeaderStyle>
-    <Head />
+const Header = ({ value, onSearch, onValueSelect, sortValue }) => {
+  return (
     <header className="header">
-      <div className="logo">
-        <Link to="/">Movie Finder</Link>
-      </div>
-      <div className="search-bar">
-        <form  className="header__form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search Movie"
-            className="header__input"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-      <div className="dropdown_item text-center">
-        <p>Popular</p>
-      </div>
+      <span className="header__logo-name">Movie Finder</span>
+      <span className="header__logo-phone">- Box</span>
+      <form className="search">
+        <input
+          className="search__input"
+          type="text"
+          placeholder="Search Movies..."
+          value={value}
+          onChange={e => onSearch(e.currentTarget.value)}
+        />
+        <button disabled className="search__button">
+          <i className="search__icon fa fa-search" />
+        </button>
+      </form>
+      <Dropdown sortValue={sortValue} onValueSelect={onValueSelect} />
     </header>
-  </HeaderStyle>
-)
+  );
+};
 
-export default Header
-
-//TODO:
-// Dropdown Items should be added later. now only a hard coded item available on DOM as (Popular)
+export default Header;

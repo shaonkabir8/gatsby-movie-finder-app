@@ -1,41 +1,39 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "gatsby-movie-finder-app",
+  "desc": "Best Movie finder application created a lot of coffee and love",
   "version": "0.1.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
+  "private": true,
+  "author": "Shaon Kabir <shaonkabir98@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.19.7",
-    "gatsby-image": "^2.2.41",
-    "gatsby-plugin-sass": "^2.1.30",
-    "gatsby-plugin-sharp": "^2.4.5",
-    "gatsby-plugin-styled-components": "^3.1.19",
-    "gatsby-source-filesystem": "^2.1.48",
-    "gatsby-transformer-sharp": "^2.3.16",
-    "node-sass": "^4.13.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "^5.0.1"
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "node-sass-chokidar": "^1.3.3",
+    "npm-run-all": "^4.1.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.3",
+    "react-spinners": "^0.4.7",
+    "react-star-rating-component": "^1.4.1",
+    "react-toastify": "^4.1.0"
   },
-  "devDependencies": {
-    "prettier": "^1.19.1"
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

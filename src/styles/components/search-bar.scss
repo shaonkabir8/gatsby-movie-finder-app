@@ -1,0 +1,67 @@
+// Mixin
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+}
+
+.search {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: #1c223a;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all 200ms;
+    margin-right: -3rem;
+
+    @include responsive(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      width: 100%;
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #737783;
+      font-weight: 100;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: #1c223a;
+  }
+
+  &__button {
+    border: none;
+    background-color: #1c223a;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    color: #737783;
+  }
+}

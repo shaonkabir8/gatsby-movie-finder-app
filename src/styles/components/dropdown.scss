@@ -1,0 +1,58 @@
+// Mixin
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+}
+
+.dropdown {
+  position: relative;
+  &__input {
+    width: 12rem;
+    font-size: 1.4rem;
+    text-align: left;
+    padding: 0.7rem 1rem;
+    color: #7678fb;
+    background-color: #1c223a;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @include responsive(phone) {
+      width: 8rem;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    margin-top: 0.5rem;
+    background-color: #1c223a;
+    border-radius: 3px;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 250ms ease-in;
+  }
+
+  &__item {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0c0f26;
+    }
+  }
+}
+
+.dropdown:hover .dropdown__content {
+  height: 10rem;
+  opacity: 1;
+  visibility: visible;
+}

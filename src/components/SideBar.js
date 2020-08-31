@@ -1,75 +1,59 @@
-import React from "react"
-import { Link } from 'react-router-dom'
-import MovieDB from "../images/MovieDb.png"
+import React from "react";
+import moviedbLogo from "../img/moviedb.png";
 
-
-
-const sidebar = () => (
-  <nav className="sidebar">
-    <ul className="sidebar__list">
-      <li className="sidebar__item">
-        <Link className="sidebar__link">All Genres</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Adventure</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Action</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Drama</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Comedy</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Fiction</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Romantic</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Horror</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Crime</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Documentary</Link>
-      </li>
-      <li className="sidebar__item">
-        <Link className="sidebar__link">Animation</Link>
-      </li>
-    </ul>
-    <div className="sidebar__footer">
-      <div className="sidebar__footer-image">
-      <a href="https://example.com">
-      <img src={MovieDB} alt="MovieDB_Logo"  className="sidebar__footer-img" />
-      </a>
-      </div>
-      <div className="sidebar__footer-content">
-      Build with <i className="fas fa-heart"></i> and
-        <i className="fas fa-coffee"></i> by {""}
+const SideBar = ({ items, onItemSelect, selectedItem }) => {
+  return (
+    <nav className="sidebar">
+      <ul className="side-nav">
+        {items.map(item => (
+          <li
+            key={item.id}
+            className={
+              item === selectedItem
+                ? "side-nav__item side-nav__item--active"
+                : "side-nav__item"
+            }
+            onClick={() => onItemSelect(item)}
+          >
+            <a className="side-nav__link">{item.name}</a>
+          </li>
+        ))}
+      </ul>
+      <div className="footer">
         <a
-          href="https://shaonkabir.netlify.com"
-          className="footer-link"
-          rel="noopener noreferrer"
-          target="_blank"
+          href="https://www.themoviedb.org/"
+          target="_blanck"
+          className="footer__logo"
         >
-          Shaon Kabir
+          <img
+            src={moviedbLogo}
+            alt="Powered by the movie database"
+            className="footer__logo-img"
+          />
         </a>
-        &copy; 2020. View Project on {""}
-        <a
-          href="https://github.com/shaonkabir8/gatsby-movie-finder-app"
-          rel="noopener noreferrer"
-          className="footer-link"
-          target="_blank"
-        >
-          Github
-        </a>
+        <div className="legal">
+          &copy; 2019 by{" "}
+          <a
+            href="https://shaonkabir.netlify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            Shaon Kabir.
+          </a>{" "}
+          All rights reserved. View project on{" "}
+          <a
+            href="https://github.com/shaonkabir8/gatsby-movie-finder-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            GitHub.
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
-)
+    </nav>
+  );
+};
 
-export default sidebar
+export default SideBar;
